@@ -69,12 +69,12 @@ class DBArchive:
         print (str(r_copied) + " -- " + str(rows_copied))
 
    # Create path for temp files
-   def createBackupDir(self):
-       self.PATH=self.TMP_DIR + "/" + self.CAPTION + "/"
-       if not os.path.isdir(self.PATH):
-          status, txt=commands.getstatusoutput("mkdir -p " + self.PATH )
-          if status !=0:
-             self.end_sub('Failed to create backup directory')
+   #def createBackupDir(self):
+   #    self.PATH=self.TMP_DIR + "/" + self.CAPTION + "/"
+   #    if not os.path.isdir(self.PATH):
+   #       status, txt=commands.getstatusoutput("mkdir -p " + self.PATH )
+   #       if status !=0:
+   #          self.end_sub('Failed to create backup directory')
 
   # Archive data
    def startArchive(self):
@@ -228,10 +228,10 @@ class DBArchive:
        rnd_stop=randint(10000, 50000)
        self.BATCH_ID=randint(rnd_start, rnd_stop)
        # Cleanup
-       cmd="rm -f " + self.PATH + "/*__*.sql"
-       status,txt=commands.getstatusoutput(cmd)
-       if status !=0:
-          self.end_sub("Not able to delete SQL dump file: "+ " code:"+ str(status) + " " + str(txt))
+       #cmd="rm -f " + self.PATH + "/*__*.sql"
+       #status,txt=commands.getstatusoutput(cmd)
+       #if status !=0:
+       #   self.end_sub("Not able to delete SQL dump file: "+ " code:"+ str(status) + " " + str(txt))
 
        elapsed_time = time.time() - start_time
 
@@ -490,7 +490,7 @@ try:
    batch_size=archive.BATCH_SIZE
    init_where=archive.init_where
    main_table=archive.MAIN_TABLE
-   archive.createBackupDir()
+   #archive.createBackupDir()
    archive.is_primary_tbl_list=1
    archive.show_stats=1
 except KeyboardInterrupt:
