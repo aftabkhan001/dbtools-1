@@ -1,5 +1,5 @@
 
-This tool delete hierarchical data,  specify condition to delete data from parent/root_table and it will utomatically detect/delete related data from all child tables.
+This tool delete hierarchical data,  specify condition to delete data from parent/root_table and it will automatically detect/delete related data from all child tables.
 
 ## RISKS
 It is a read-write tool. It deletes data from the source by default, so you should backup your data and test it with a copy of live data with the --dry-run option  if you’re not sure about them.
