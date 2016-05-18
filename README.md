@@ -66,7 +66,7 @@ Wed May 18 16:46:57 2016 DRY RUN end
  Bye
 ```
 
-* Delete all data from parent table and related data from its child tables
+* Delete customer record from parent table and all related data from its child tables
 
 ```
 python  del_data.py --user root --password ******* --database classicmodels --where "customerNumber=103" --root-table customers --limit 1
