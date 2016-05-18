@@ -94,5 +94,5 @@ Wed May 18 16:48:45 2016 Batch completed. Execution time: 0s - Items deleted :No
 ```
 
 ## Known issues:
-* This tool expected to work well with simple hierarchical data model.
+* This tool works well with simple hierarchical data model.
 * It uses IN() operator to perform delete operation, to reduce impact on production server use small value with ```--limit``` option, here is related bug http://bugs.mysql.com/bug.php?id=68046
