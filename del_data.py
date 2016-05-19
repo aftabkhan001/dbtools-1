@@ -300,15 +300,14 @@ class DBArchive:
    def getChildtables(self,table):
        sql="SELECT DISTINCT TABLE_NAME,COLUMN_NAME,REFERENCED_TABLE_NAME FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE WHERE REFERENCED_TABLE_NAME ='" + table +"' AND TABLE_SCHEMA='" + self.MAIN_DATABASE +"'"
        resultset=self.runSQL(sql)
-       for k,v in self.sub_tables.items():
-          for result in resultset:
-             if v[0]==result[0] and result[2]== v[2]:
-                return 0
+       #for k,v in self.sub_tables.items():
+       #   for result in resultset:
+       #      if v[0]==result[0] and result[2]== v[2]:
+       #         return 0
        for result in resultset:
           self.sub_tables[self.child_table_ids]=(result[0],result[1],result[2])
           self.child_table_ids+=1
-       for result in resultset:
-           self.getChildtables(result[0])
+          self.getChildtables(result[0])
 
 # Generate list of tables using [virtual] foreign keys  to archive
    def getTablesList(self, RootTable=""):
