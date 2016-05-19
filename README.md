@@ -1,4 +1,5 @@
 
+## del_data.py
 This tool delete hierarchical data,  specify condition to delete data from parent/root_table and it will automatically detect all child tables using foreign keys to delete related data.
 
 ## RISKS
