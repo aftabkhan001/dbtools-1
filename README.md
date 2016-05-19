@@ -94,6 +94,6 @@ Wed May 18 16:48:45 2016 Batch completed. Execution time: 0s - Items deleted :No
 ```
 
 ## Known issues & limitations:
-* This tool works with parent/root table using single column primary key table.
+* This tool works with parent/root table using single column primary key only.
 * It uses IN() operator to perform delete operation, to reduce impact on production server use small value with ```--limit``` option, here is a related bug http://bugs.mysql.com/bug.php?id=68046
 
