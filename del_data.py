@@ -157,7 +157,7 @@ class DBArchive:
        sql="DELETE FROM "+ self.MAIN_DATABASE + "." + tbl + " WHERE " + where + " LIMIT 1000"
 
        if self.DRY_RUN=="true":
-            #print('\033[96m' + " Running delete" + '\033[0m')
+            sql="DELETE FROM "+ self.MAIN_DATABASE + "." + tbl + " WHERE " + where 
             if len(sql) > 500:
                self.log_status(sql[0:500]+") /* output truncated ...*/\n")
             else:
