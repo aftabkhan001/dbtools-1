@@ -48,10 +48,10 @@ DRY-RUN
 | 3) Where condition:      | WHERE customerNumber=103 LIMIT 1 |
 +--------------------------+----------------------------------+
 Running first batch
-DELETE FROM classicmodels.payments WHERE customerNumber IN('103') LIMIT 1000
-DELETE FROM classicmodels.orderdetails WHERE orderNumber IN('10123','10298','10345') LIMIT 1000
-DELETE FROM classicmodels.orders WHERE customerNumber IN('103') LIMIT 1000
-DELETE FROM classicmodels.customers WHERE  customerNumber IN('103') LIMIT 1000
+DELETE FROM classicmodels.payments WHERE customerNumber IN('103') 
+DELETE FROM classicmodels.orderdetails WHERE orderNumber IN('10123','10298','10345') 
+DELETE FROM classicmodels.orders WHERE customerNumber IN('103') 
+DELETE FROM classicmodels.customers WHERE  customerNumber IN('103') 
 +---+--------------+------------+--------------+------------+--------------+
 | # | Table        | Rows found | Rows deleted | Time spent | Parent Table |
 +---+--------------+------------+--------------+------------+--------------+
