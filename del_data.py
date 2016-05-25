@@ -498,8 +498,8 @@ except KeyboardInterrupt:
 
 
 archive.log_status("Running first batch")
-
-while (1):
+rows_deleted=1
+while (rows_deleted):
  try:
     start_time = time.time()
     archive.nextBatch()
